@@ -4,18 +4,14 @@
              x:Class="Like.MainPage">
 
     <StackLayout>
-        <Label Text="Mountains"/>
-        <Image Source="" Aspect="AspectFill"/>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+        <Label Text="Mountains" HorizontalTextAlignment="Center" FontSize="30" Margin="10" FontAttributes="Bold"/>
+        <Image Source="mountains_embeddedImages.jpg" Aspect="AspectFill" Margin="0, 20"/>
 
-            <ImageButton Grid.Column="0" Source="" Clicked="LikeButtonClicked"/>
-            <ImageButton Grid.Column="1" Source="" Clicked="DisLikeButtonClicked"/>
-        </Grid>
-        
+        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+            <ImageButton Grid.Column="0" Aspect="AspectFit" Source="like.jpg" Clicked="LikeButtonClick" HorizontalOptions="CenterAndExpand"/>
+            <ImageButton Grid.Column="1" Aspect="AspectFit" Source="dislike.jpg" Clicked="DisLikeButtonClick" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+
         <Label x:Name="Likes"
                HorizontalOptions="End"
                FontAttributes="Bold"
