@@ -4,6 +4,18 @@
              x:Class="Like.MainPage">
 
     <StackLayout>
+        <Label Text="Mountains"/>
+        <Image Source="" Aspect="AspectFill"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Grid.Column="0" Source="" Clicked="LikeButtonClicked"/>
+            <ImageButton Grid.Column="1" Source="" Clicked="DisLikeButtonClicked"/>
+        </Grid>
+        
         <Label x:Name="Likes"
                HorizontalOptions="End"
                FontAttributes="Bold"
