@@ -22,7 +22,8 @@ namespace Like
         }
         public void DisLikeButtonClick(object sender, EventArgs args)
         {
-            likeCounter = likeCounter <= 0 ? 0 : likeCounter--;
+            if (likeCounter == 0) return;
+            likeCounter--;
             Likes.Text = likeCounter.ToString()+" Likes";
         }
     }
